@@ -6,9 +6,10 @@ let visitCount = 0;
 
 app.get('/', (req, res) => {
 	visitCount++;
-
+	let visitMessage = `Hello there! This app has been visited ${visitCount} times!`;
+	console.log(visitMessage)
 	res.json({
-		message:`Hello there! This app has been visited ${visitCount} times!`
+		message:visitMessage
 	});
 });
 
